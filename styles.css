@@ -1,0 +1,151 @@
+/* styles.css */
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #111112;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+header {
+    background-color: #111112;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 0.5px groove #fff;
+}
+
+main {
+    flex: 1 0 auto;
+    flex-grow: 1;
+    background-color: #18181a;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    background-color: #f2f2f2;
+    color: #007acc;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menu-button.active {
+    background-color: #f2f2f2;
+    color: #007acc;
+    border-radius: 5px;
+}
+
+.menu-button:after {
+    content: "▼";
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.submenu {
+    /* display: none; */
+    position: absolute;
+    background-color: #1f1f24;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    right: 0;
+    border-radius: 5px;
+    z-index: 2;
+    width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear;
+}
+
+.menu-button.active + .submenu {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+.submenu li a {
+    color: #007acc;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.submenu li a:hover {
+    background-color: #007acc;
+    color: #fff;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: auto;
+}
+
+footer {
+    background-color: #111112;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-top: auto;
+}
