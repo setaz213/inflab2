@@ -61,7 +61,7 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background-color: #5c5858;
+    background-color: #f2f2f2;
     color: #007acc;
     border-radius: 5px;
     padding: 5px 10px;
